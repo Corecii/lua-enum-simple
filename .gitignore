@@ -6,4 +6,6 @@ roblox.toml
 /*.rbxlx
 /*.rbxm
 
+/build/
+
 /node_modules

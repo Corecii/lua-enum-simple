@@ -2,7 +2,7 @@
 
 A super-simple enum type and a super-simple enum collection type.
 
-[Documentation](https://corecii.github.io/LuaEnum/)
+[Documentation](https://corecii.github.io/lua-enum-simple/)
 
 Install with [wally](https://wally.run):
 ```toml

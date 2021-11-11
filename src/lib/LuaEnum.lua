@@ -64,7 +64,7 @@ local isNewArgs = t.tuple(t.string, t.map(t.string, t.integer), t.optional(isRep
 --[=[
 	@param enumName string -- The name of the Enum
 	@param items { [string]: number } -- The enum's items
-	@param representation Representation? (default: "Id")
+	@param representation Representation? -- (default: "Id")
 	@return LuaEnum
 
 	Creates a new LuaEnum.

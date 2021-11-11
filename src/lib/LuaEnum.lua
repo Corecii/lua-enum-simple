@@ -6,6 +6,13 @@ local t = require(script.Parent.Parent.t)
 	An Enum-like Lua object
 ]=]
 
+--[=[
+	@prop EnumCollection LuaEnumCollection
+	@within LuaEnum
+
+	The LuaEnumCollection type
+]=]
+
 local LuaEnum = {}
 
 local function represent(representation, enumName, name, value)

@@ -1,6 +1,8 @@
 [package]
 name = "corecii/lua-enum-simple"
 version = "0.1.0"
+description = "A super-simple enum library"
+license = "MIT"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 

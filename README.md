@@ -2,11 +2,16 @@
 
 A super-simple enum type and a super-simple enum collection type.
 
+[Documentation](https://corecii.github.io/LuaEnum/)
+
+Install with [wally](https://wally.run):
 ```toml
 # wally.toml
 [dependencies]
 LuaEnum = "corecii/lua-enum-simple@0.1.0"
 ```
+
+[or use a packaged release model](https://github.com/Corecii/lua-enum-simple/releases/latest)
 
 ---
 

@@ -1,0 +1,9 @@
+/packages/
+.vscode/
+
+roblox.toml
+
+/*.rbxlx
+/*.rbxm
+
+/node_modules

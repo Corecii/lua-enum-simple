@@ -1,0 +1,10 @@
+title = "LuaEnum"
+
+gitSourceBranch = "main"
+
+[docusaurus]
+organizationName = "Shae A"
+projectName = "LuaEnum"
+url = "https://corecii.github.io"
+baseUrl = "/LuaEnum/"
+tagline = "A simple Enum type"

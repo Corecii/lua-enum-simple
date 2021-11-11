@@ -1,0 +1,12 @@
+{
+  "name": "LuaEnum",
+  "tree": {
+    "$path": "src/packaged",
+    "packages": {
+      "$path": "Packages",
+      "lib": {
+        "$path": "lib.project.json"
+      }
+    }
+  }
+}

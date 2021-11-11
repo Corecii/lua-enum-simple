@@ -1,0 +1,33 @@
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Check out Repository
+        uses: actions/checkout@v2
+
+      - name: Install Roblox
+        uses: OrbitalOwen/roblox-win-installer-action@1.1
+        with:
+          cookie: ${{ secrets.ROBLOX_COOKIE }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+        timeout-minutes: 5
+
+      - name: Install Foreman
+        uses: Roblox/setup-foreman@v1
+        with:
+          version: "^1.0.0"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull Packages
+        run: wally install
+
+      - name: Build Place File
+        run: rojo build -o test.rbxlx test.project.json
+
+      - name: Run Tests
+        run: |
+          run-in-roblox --place test.rbxlx --script src/test/run-in-roblox.lua
+          | Tee-Object -file test-output.txt;
+          if($(Get-Content -Path test-output.txt -Tail 1) -match '0 failed'){ exit 0 } else { exit 1 }

@@ -1,0 +1,16 @@
+return function()
+	local Builder = require(script.Parent.Builder)
+
+	describe("fromModules", function()
+		it("builds a LuaEnumCollection from modules", function()
+			local Collection = Builder.fromModules(script)
+			expect(Collection.Animal.Mouse).to.equal("Animal.Mouse")
+			expect(Collection.SubCollection.NotAnimal.Car).to.equal("NotAnimal.Car")
+		end)
+		it("allows specifying representation", function()
+			local Collection = Builder.fromModules(script, "Value")
+			expect(Collection.Animal.Mouse).to.equal(3)
+			expect(Collection.SubCollection.NotAnimal.Car).to.equal(1)
+		end)
+	end)
+end

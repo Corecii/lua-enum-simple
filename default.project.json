@@ -1,6 +1,6 @@
 {
-  "name": "default",
+  "name": "lib",
   "tree": {
-    "$path": "lib.project.json"
+    "$path": "src/lib"
   }
 }
